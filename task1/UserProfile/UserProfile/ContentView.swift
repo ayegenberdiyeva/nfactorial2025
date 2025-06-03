@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+
         NavigationStack {
             VStack {
                 UserInfoView(name: "Amina", age: "20", location: "Kazakhstan", followers: "10")
@@ -21,6 +22,8 @@ struct ContentView: View {
                         Post(title: "Second Post", content: "Another post here."),
                     ])
                 }
+                
+                Spacer()
             }
         }
     }

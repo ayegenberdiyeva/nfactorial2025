@@ -8,9 +8,12 @@ struct UserInfoView: View {
     
     var body: some View {
         HStack (alignment: .top) {
-            Image(systemName: "person.circle.fill")
+            Image("pfp")
                 .resizable()
-                .frame(width: 52, height: 52)
+                .frame(width: 55, height: 57)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.blue.opacity(0.3), lineWidth: 2))
+                .shadow(radius: 3)
             
             VStack(alignment: .leading) {
                 Text(name)
@@ -37,5 +40,6 @@ struct UserInfoView: View {
             Spacer()
         }
         .padding(.horizontal, 20)
+        .padding(.top, 25)
     }
 }
