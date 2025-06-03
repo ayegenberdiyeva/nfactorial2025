@@ -7,10 +7,7 @@ struct ContentView: View {
                 UserInfoView(name: "Amina", age: "20", location: "Kazakhstan", followers: "10")
                 
                 NavigationLink(destination: DetailsView()) {
-                    CustomButton(title: "Details") {
-                                        print("Details tapped")
-                                        
-                                    }
+                    CustomButton(title: "Details")
                                     .padding()
                 }
                 
