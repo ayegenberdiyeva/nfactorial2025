@@ -1,17 +1,19 @@
-//
-//  ToDoAppApp.swift
-//  ToDoApp
-//
-//  Created by Amina Yegenberdiyeva on 04.06.2025.
-//
-
 import SwiftUI
 
 @main
 struct ToDoAppApp: App {
+    @StateObject var authVM = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           if authVM.isLoggedIn {
+                MainTabView()
+                   .environmentObject(authVM)
+           } else {
+               LoginView()
+                   .environmentObject(authVM)
+           }
         }
     }
 }
+

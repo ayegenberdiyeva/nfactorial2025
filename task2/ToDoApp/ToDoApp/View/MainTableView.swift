@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct MainTableView: View {
+struct MainTabView: View {
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(ToDoVM: ToDoViewModel())
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
             
-            ProfileView()
+            ProfileView(authVM: AuthViewModel())
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }
